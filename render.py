@@ -8,7 +8,7 @@ def render_svg(svg):
     """Renders the given svg string."""
     b64 = base64.b64encode(svg.encode("utf-8")).decode("utf-8")
     html = r'<center><img src="data:image/svg+xml;base64,%s"/></center>' % b64
-    st.write(html, unsafe_allow_html=True)
+    st.image(svg)#, unsafe_allow_html=True)
 
 
 def rotate_svg(svg, angle):
